@@ -1,0 +1,11 @@
+.smoothImage {
+	transition: opacity 1s;
+}
+
+.imageVisible {
+	opacity: 1;
+}
+
+.imageHidden {
+	opacity: 0;
+}

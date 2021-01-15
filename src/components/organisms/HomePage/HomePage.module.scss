@@ -1,0 +1,89 @@
+@import '../../../globals/mixins';
+
+.homePage {
+	img {
+		max-width: 100%;
+
+		@include tablet {
+			max-width: 30rem;
+		}
+	}
+
+	.highlight {
+		@include highlight;
+	}
+
+	.topBanner {
+		padding: 1rem;
+		background-color: whitesmoke;
+		text-align: left;
+		position: relative;
+
+		.content {
+			max-width: 90rem;
+			margin: 0 auto;
+		}
+
+		.row {
+			display: block;
+
+			@include desktop {
+				display: flex;
+			}
+
+			.column {
+				flex: auto;
+			}
+
+			.imageColumn {
+				flex: 0 0 auto;
+				max-width: 100%;
+				text-align: center;
+
+				@include tablet {
+					display: block;
+				}
+			}
+
+			button {
+				margin: 1rem 0;
+			}
+		}
+
+		.text {
+			text-align: center;
+			margin: 0 auto;
+
+			@include desktop {
+				text-align: left;
+				margin-top: 10rem;
+			}
+
+			p {
+				font-size: 1.2rem;
+			}
+
+			h2 {
+				font-size: 3rem;
+				margin: 0;
+
+				@include tablet {
+					font-size: 4rem;
+				}
+			}
+		}
+	}
+
+	ul {
+		font-size: 2rem;
+	}
+
+	p,
+	ul {
+		display: none;
+
+		@include tablet {
+			display: block;
+		}
+	}
+}

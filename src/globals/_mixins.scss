@@ -1,0 +1,27 @@
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+	@media (min-width: #{$tablet-width}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$desktop-width}) {
+		@content;
+	}
+}
+
+@mixin input {
+	background-color: hsl(0, 0%, 100%);
+	border-color: hsl(0, 0%, 80%);
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 1px;
+	min-width: 38px;
+}
+
+@mixin highlight {
+	background: linear-gradient(to top, #007db529 50%, transparent 50%);
+}

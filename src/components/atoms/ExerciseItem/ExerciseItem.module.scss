@@ -1,0 +1,86 @@
+@import '../../../globals/mixins';
+
+.exerciseItem {
+	position: relative;
+	padding: 1rem;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	.heart {
+		position: absolute;
+		top: 1.5rem;
+		right: 1.5rem;
+
+		svg {
+			&:hover {
+				fill: black;
+			}
+		}
+	}
+
+	.heart {
+		z-index: 1;
+		opacity: 1;
+	}
+
+	.text {
+		display: flex;
+		padding: 1rem 0;
+
+		.title {
+			flex: 100%;
+			align-self: center;
+			font-size: 1rem;
+			text-align: left;
+
+			@include tablet {
+				flex: 0 0 40%;
+			}
+		}
+
+		.bodyAreas {
+			display: none;
+			flex: 100%;
+			align-self: center;
+			flex-wrap: wrap;
+
+			@include desktop {
+				display: flex;
+			}
+
+			.bodyArea {
+				flex: auto;
+				margin: 0.5rem;
+				padding: 0 0.5rem;
+				border-radius: 5px;
+				background-color: #007db5;
+				color: white;
+
+				&:last-of-type {
+					//margin: 0;
+				}
+			}
+		}
+	}
+
+	.imageBox {
+		position: relative;
+		margin: auto;
+		overflow: hidden;
+	}
+
+	.exerciseImage {
+		max-width: 100%;
+		transition: all 0.3s;
+		display: block;
+		width: 100%;
+		height: auto;
+		transform: scale(1);
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}

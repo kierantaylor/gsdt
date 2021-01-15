@@ -1,0 +1,9 @@
+@import '../../../globals/mixins';
+
+.basePage {
+	padding-top: 5rem;
+
+	@include tablet {
+		padding-top: 0;
+	}
+}

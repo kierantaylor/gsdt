@@ -1,0 +1,418 @@
+@import '../../../globals/mixins';
+
+.topBar {
+	display: block;
+
+	@include tablet {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	@include desktop {
+		flex-wrap: nowrap;
+	}
+
+	@include tablet {
+		display: flex;
+
+		&.sticky {
+			padding-top: 2.5rem;
+			position: fixed;
+			z-index: 2;
+			width: 100%;
+		}
+	}
+
+	padding: 1rem;
+	background-color: whitesmoke;
+	text-align: left;
+	align-items: center;
+
+	&.sticky {
+		@include tablet {
+			padding-top: 0;
+			position: fixed;
+			width: 100%;
+			z-index: 4;
+			top: 0;
+		}
+
+		.bottomBar {
+			@include tablet {
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+			}
+		}
+	}
+
+	.column {
+		margin-bottom: 1rem;
+		flex: auto;
+		align-self: center;
+
+		@include desktop {
+			margin-bottom: 0;
+		}
+	}
+
+	.labelColumn {
+		flex: 0 0 auto;
+		align-self: center;
+	}
+
+	.innerRow {
+		display: block;
+
+		@include tablet {
+			display: flex;
+		}
+
+		&.left {
+			@include tablet {
+				justify-content: flex-start;
+			}
+		}
+
+		&.right {
+			@include tablet {
+				justify-content: flex-end;
+			}
+		}
+
+		@include tablet {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		.innerColumn {
+			flex: auto;
+
+			@include desktop {
+				flex: 0 0 auto;
+			}
+		}
+	}
+
+	.option {
+		color: grey;
+		padding: 0;
+		width: 100%;
+		margin-top: 0.5rem;
+
+		@include tablet {
+			width: 15rem;
+			padding-left: 0.5rem;
+			margin: 0;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.searchInput {
+		.input,
+		.submit {
+			display: inline-block;
+			padding: 10px 15px;
+			border-radius: 0;
+			-webkit-appearance: none;
+			box-sizing: border-box;
+			width: 100%;
+
+			@include tablet {
+				width: auto;
+			}
+		}
+
+		.input {
+			border: 1px solid hsl(0, 0%, 70%);
+			border-radius: 4px 0 0 4px;
+		}
+
+		.submit {
+			background-color: #d6eaf3;
+			border: 1px solid transparent;
+		}
+
+		.submit::-moz-focus-inner {
+			border: 0;
+		}
+
+		padding: 0;
+		width: 100%;
+		margin-top: 0.5rem;
+
+		@include tablet {
+			width: auto;
+			padding-left: 0.5rem;
+			margin: 0;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.exercisePage {
+	margin: 0 auto;
+
+	.row {
+		display: flex;
+		.column {
+			flex: auto;
+
+			ul {
+				margin: 0;
+			}
+		}
+	}
+
+	.bottomBar {
+		text-align: left;
+		border-bottom: 1px solid #eee;
+		background-color: white;
+		padding: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.filtersBar {
+		&.sticky {
+			@include tablet {
+				padding-top: 0;
+				position: fixed;
+				width: 100%;
+				z-index: 4;
+				top: 0;
+			}
+
+			.bottomBar {
+				@include tablet {
+					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+				}
+			}
+		}
+	}
+
+	.stickyList {
+		@include tablet {
+			padding-top: 10rem;
+		}
+	}
+
+	.filters {
+		padding-bottom: 1rem;
+
+		@include tablet {
+			padding-bottom: 0;
+		}
+	}
+
+	.sorting {
+		flex: 0 0 auto;
+
+		@include tablet {
+			padding-right: 0.5rem;
+		}
+	}
+
+	.filterBar {
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		@include desktop {
+			flex-wrap: nowrap;
+		}
+
+		@include tablet {
+			display: flex;
+
+			&.sticky {
+				padding-top: 2.5rem;
+				position: fixed;
+				z-index: 2;
+				width: 100%;
+			}
+		}
+
+		padding: 1rem;
+		background-color: whitesmoke;
+		text-align: left;
+		align-items: center;
+		.filters {
+			flex: 100%;
+			list-style: none;
+			margin-block-start: 0;
+			margin-block-end: 0;
+			margin-inline-start: 0;
+			margin-inline-end: 0;
+			padding-inline-start: 0;
+
+			li {
+				display: inline-block;
+				padding: 0 0.5rem;
+
+				&:first-of-type {
+					padding-left: 0;
+				}
+
+				&.title {
+					width: 100%;
+					font-weight: bold;
+
+					@include tablet {
+						width: auto;
+					}
+				}
+
+				&.option {
+					color: grey;
+					padding: 0;
+					width: 100%;
+					margin-top: 0.5rem;
+
+					@include tablet {
+						width: 15rem;
+						padding-left: 0.5rem;
+						margin: 0;
+					}
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+
+				&.searchInput {
+					.input,
+					.submit {
+						display: inline-block;
+						padding: 10px 15px;
+						border-radius: 0;
+						-webkit-appearance: none;
+						box-sizing: border-box;
+						width: 100%;
+
+						@include tablet {
+							width: auto;
+						}
+					}
+
+					.input {
+						border-radius: 4px 0 0 4px;
+					}
+
+					.submit {
+						background-color: #d6eaf3;
+						border: 1px solid transparent;
+					}
+
+					.submit::-moz-focus-inner {
+						border: 0;
+					}
+
+					padding: 0;
+					width: 100%;
+					margin-top: 0.5rem;
+
+					@include tablet {
+						width: auto;
+						padding-left: 0.5rem;
+						margin: 0;
+					}
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+		}
+
+		.search {
+			flex: 0 0 auto;
+			justify-self: end;
+
+			input {
+				font-size: 1rem;
+				padding: 0.5rem;
+				border-radius: 4px;
+				border: 1px solid hsl(0, 0%, 70%);
+				color: black;
+			}
+		}
+	}
+
+	.list {
+		flex-wrap: wrap;
+
+		display: flex;
+
+		@include tablet {
+			display: flex;
+		}
+
+		.item {
+			flex: 0 50%;
+
+			@include tablet {
+				flex: 0 20%;
+			}
+		}
+	}
+}
+
+.input {
+	@include input;
+}
+
+.mobileBackToFilters {
+	display: none;
+	padding: 1rem;
+	background-color: whitesmoke;
+	box-sizing: border-box;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+
+	&.visible {
+		display: block;
+		position: fixed;
+		z-index: 2;
+		width: 100%;
+
+		@include tablet {
+			display: none;
+		}
+	}
+}
+
+.totalsMobileFilters {
+	display: none;
+	padding: 1rem;
+	background-color: white;
+	box-sizing: border-box;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+	margin-top: 3.1875rem;
+
+	&.visible {
+		display: block;
+		position: fixed;
+		z-index: 2;
+		width: 100%;
+
+		@include tablet {
+			display: none;
+		}
+	}
+}
+
+.hackyOffPageElement {
+	position: absolute;
+	bottom: -20px;
+	display: block;
+	height: 10px;
+	width: 10px;
+}
+
+.exerciseList,
+.infiniteScroll {
+	width: 100%;
+}

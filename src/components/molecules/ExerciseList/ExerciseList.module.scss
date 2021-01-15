@@ -1,0 +1,19 @@
+@import '../../../globals/mixins';
+
+.list {
+	flex-wrap: wrap;
+
+	display: flex;
+
+	@include tablet {
+		display: flex;
+	}
+
+	.item {
+		flex: 0 50%;
+
+		@include tablet {
+			flex: 0 20%;
+		}
+	}
+}

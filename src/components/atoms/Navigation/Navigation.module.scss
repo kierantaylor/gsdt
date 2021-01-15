@@ -1,0 +1,115 @@
+@import '../../../globals/_mixins.scss';
+
+.navigation {
+	padding: 1.5rem 1rem 1rem 1rem;
+	border-bottom: 0.1rem solid rgb(210, 210, 210);
+
+	position: fixed;
+	width: 100%;
+	z-index: 5;
+	background-color: white;
+	box-sizing: border-box;
+
+	@include tablet {
+		position: relative;
+	}
+
+	.burgerMenu {
+		flex: auto;
+		text-align: right;
+
+		@include desktop {
+			display: none;
+		}
+	}
+
+	@include tablet {
+		position: relative;
+
+		&.sticky {
+			position: fixed;
+			background-color: white;
+			width: 100%;
+			z-index: 3;
+
+			.view {
+				padding-right: 2rem;
+			}
+		}
+	}
+
+	.topRow {
+		display: flex;
+
+		.brand {
+			text-align: left;
+			flex: 0 25%;
+			&:hover {
+				cursor: pointer;
+			}
+
+			img {
+				max-width: 2.5rem;
+				text-align: left;
+
+				@include tablet {
+					max-width: 4.6rem;
+				}
+			}
+		}
+
+		.items {
+			flex: auto;
+			align-self: center;
+			display: none;
+
+			@include desktop {
+				display: block;
+			}
+
+			ul {
+				list-style: none;
+
+				li {
+					font-size: 1.25rem;
+					font-weight: bold;
+					padding: 0 1rem;
+					display: inline-block;
+
+					&:hover {
+						cursor: pointer;
+					}
+
+					&.active {
+						background: linear-gradient(
+							to top,
+							#007db529 50%,
+							transparent 50%
+						);
+					}
+				}
+			}
+		}
+
+		.view {
+			display: none;
+			text-align: right;
+
+			@include desktop {
+				display: block;
+			}
+			align-self: center;
+			flex: 0 25%;
+			opacity: 0.5;
+
+			&:hover {
+				cursor: pointer;
+				opacity: 1;
+			}
+
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+}
