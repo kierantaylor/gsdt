@@ -146,10 +146,6 @@ const ExercisePage = () => {
 									ref={input => {
 										searchInputRef = input
 									}}
-									value={searchTerm}
-									onChange={e =>
-										setSearchTerm(e.currentTarget.value)
-									}
 									className={styles.input}
 									type="text"
 									placeholder="Search for an exercise..."
