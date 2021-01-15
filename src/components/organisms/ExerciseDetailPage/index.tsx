@@ -22,7 +22,7 @@ import { useLastLocation } from 'react-router-last-location'
 const ExerciseDetailPage = (props: IRouterProps) => {
 	const dispatch = useDispatch()
 	const loadExercises = useCallback(() => {
-		dispatch(exerciseActions.actions.get)
+		dispatch(exerciseActions.fetchExercises())
 	}, [dispatch])
 
 	const exercise: IExercise = useSelector(state =>

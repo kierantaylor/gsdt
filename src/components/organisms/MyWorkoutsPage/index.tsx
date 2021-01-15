@@ -1,7 +1,10 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import { selectAllWorkoutExercises } from '../../../selectors/exerciseSelectors'
+import {
+	selectAllWorkoutExercises,
+	selectGender,
+} from '../../../selectors/exerciseSelectors'
 import { IExercise } from '../../../types/Exercise'
 import * as exerciseActions from '../../../actions/exerciseActions'
 import styles from './MyWorkoutsPage.module.scss'
@@ -12,6 +15,8 @@ const MyWorkoutsPage = () => {
 	const workoutExercises: Array<IExercise> = useSelector(
 		selectAllWorkoutExercises,
 	)
+
+	const selectedGender: Gender = useSelector(selectGender)
 
 	const dispatch = useDispatch()
 	const loadExercises = useCallback(() => {
@@ -33,7 +38,7 @@ const MyWorkoutsPage = () => {
 				</React.Fragment>
 			) : (
 				<ExerciseList
-					selectedGender={Gender.Male}
+					selectedGender={selectedGender}
 					exercises={workoutExercises}
 				/>
 			)}
