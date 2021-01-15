@@ -1,4 +1,5 @@
 @import '../../../globals/mixins';
+@import '../../../globals/colours';
 
 .exerciseItem {
 	position: relative;
@@ -55,7 +56,7 @@
 				margin: 0.5rem;
 				padding: 0 0.5rem;
 				border-radius: 5px;
-				background-color: #007db5;
+				background-color: $primaryColor;
 				color: white;
 
 				&:last-of-type {

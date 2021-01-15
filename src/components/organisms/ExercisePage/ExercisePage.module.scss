@@ -1,4 +1,5 @@
 @import '../../../globals/mixins';
+@import '../../../globals/colours';
 
 .topBar {
 	display: block;
@@ -25,7 +26,7 @@
 	}
 
 	padding: 1rem;
-	background-color: whitesmoke;
+	background-color: $secondaryColor;
 	text-align: left;
 	align-items: center;
 
@@ -237,7 +238,7 @@
 		}
 
 		padding: 1rem;
-		background-color: whitesmoke;
+		background-color: $secondaryColor;
 		text-align: left;
 		align-items: center;
 		.filters {
@@ -368,7 +369,7 @@
 .mobileBackToFilters {
 	display: none;
 	padding: 1rem;
-	background-color: whitesmoke;
+	background-color: $secondaryColor;
 	box-sizing: border-box;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 

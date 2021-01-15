@@ -1,5 +1,7 @@
+@import '../../../globals/colours';
+
 .button {
-	background-color: #007db5;
+	background-color: $primaryColor;
 	border-radius: 21px;
 	border: none;
 	color: white;

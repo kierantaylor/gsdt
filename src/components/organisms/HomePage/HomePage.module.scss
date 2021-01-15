@@ -1,4 +1,5 @@
 @import '../../../globals/mixins';
+@import '../../../globals/colours';
 
 .homePage {
 	img {
@@ -15,7 +16,7 @@
 
 	.topBanner {
 		padding: 1rem;
-		background-color: whitesmoke;
+		background-color: $secondaryColor;
 		text-align: left;
 		position: relative;
 

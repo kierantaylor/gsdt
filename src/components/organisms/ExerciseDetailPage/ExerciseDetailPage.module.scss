@@ -1,4 +1,5 @@
 @import '../../../globals/mixins';
+@import '../../../globals/colours';
 
 .exercisePage {
 	h2 {
@@ -10,7 +11,7 @@
 	.filterBar {
 		display: flex;
 		padding: 1rem;
-		background-color: whitesmoke;
+		background-color: $secondaryColor;
 		text-align: left;
 		align-items: center;
 		ul {
