@@ -72,8 +72,9 @@ const ExerciseDetailPage = (props: IRouterProps) => {
 				</ul>
 				<div className={styles.actions}>
 					<div className={styles.row}>
-						<div className={`${styles.column} ${styles.text}`}>
+						<div className={styles.column}>
 							<AddToWorkoutButton
+								hideText
 								exerciseId={props.match.params.exerciseId}
 							/>
 						</div>

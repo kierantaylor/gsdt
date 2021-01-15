@@ -6,6 +6,7 @@ import HeartIconAdd from '../HeartIconAdd'
 import * as actions from '../../../actions/workoutActions'
 import styles from './AddToWorkoutButton.module.scss'
 import { selectAllWorkouts } from '../../../selectors/exerciseSelectors'
+import HeartIconRemove from '../HeartIconRemove'
 
 interface IProps {
 	exerciseId: string
@@ -43,13 +44,17 @@ const AddToWorkoutButton = (props: IProps) => {
 			onClick={() => (isAdded ? onRemove() : onAdd())}
 		>
 			<div className={styles.row}>
-				<div className={styles.column}>
+				<div
+					className={`${styles.column} ${
+						props.hideText ? styles.hideOnMobile : ''
+					}`}
+				>
 					{`${
 						isAdded ? 'Remove from My Workout' : 'Add to My Workout'
 					}`}
 				</div>
 				<div className={styles.column}>
-					<HeartIconAdd />
+					{isAdded ? <HeartIconRemove /> : <HeartIconAdd />}
 				</div>
 			</div>
 		</div>
