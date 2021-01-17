@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { addWorkout, removeWorkout } from '../../../helpers/dispatchHelpers'
+import { removeWorkout } from '../../../helpers/dispatchHelpers'
 import { selectWorkout } from '../../../selectors/workoutSelectors'
 import { Gender } from '../../../types/ExerciseList'
 import HeartIconAdd from '../HeartIconAdd'

@@ -1,10 +1,7 @@
 import { IExercise } from '../../../types/Exercise'
 import { Gender } from '../../../types/ExerciseList'
-import { IWorkout } from '../../../types/Workout'
 import ExerciseItem from '../../atoms/ExerciseItem'
-import InfiniteScroll from 'react-infinite-scroll-component'
 import styles from './ExerciseList.module.scss'
-import { useEffect, useState } from 'react'
 
 interface IProps {
 	exercises: Array<IExercise>

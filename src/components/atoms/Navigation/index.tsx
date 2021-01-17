@@ -43,7 +43,11 @@ const Navigation = (props: IRouterProps) => {
 				</div>
 
 				<div className={styles.view}>
-					<a target="_blank" href="https://uk.gymshark.com">
+					<a
+						target="_blank"
+						rel="noreferrer"
+						href="https://uk.gymshark.com"
+					>
 						Go to Gymshark&nbsp;
 						<i className="fas fa-external-link-alt"></i>
 					</a>

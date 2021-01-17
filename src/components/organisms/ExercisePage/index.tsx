@@ -7,7 +7,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateSelectedGender } from '../../../helpers/dispatchHelpers'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import LoadingSpinner from '../../atoms/LoadingSpinner'
-import { IWorkout } from '../../../types/Workout'
 import ExerciseList from '../../molecules/ExerciseList'
 import InfiniteScroll from 'react-infinite-scroller'
 import { sortByOrder, sortOptions } from './config/sorting'
@@ -15,7 +14,6 @@ import { genderOptions } from './config/gender'
 import {
 	selectAllBodyAreas,
 	selectAllExercises,
-	selectAllWorkouts,
 	selectExercisesLoading,
 	selectGender,
 } from '../../../selectors/exerciseSelectors'
